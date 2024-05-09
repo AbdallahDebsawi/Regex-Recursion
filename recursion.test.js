@@ -2,9 +2,14 @@
 
 function division(number, dividedBy) {
     // Write you logic here.
-    if (number < dividedBy) return 0;
-    else return 1 + division(number - dividedBy, dividedBy);
+    // if (number < dividedBy) return 0;
+    // else return 1 + division(number - dividedBy, dividedBy);
+    if (dividedBy === 0)
+        return 0;
+    if (number < dividedBy)
+        return 0;
 
+    return 1 + division(number - dividedBy, dividedBy);
 }
 
 /* Write a function that implement Math.pow(x,n) but using recursion
@@ -31,7 +36,12 @@ Example: n = 4 ==> 3, n= 0 ==> 0, n = 3 ==> 2 */
 
 function fibonacci(n) {
     // Write you logic here.
-    return;
+    if (n < 0 || n == 0)
+        return 0;
+    if (n == 1)
+        return 1;
+
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 /* Optional 
